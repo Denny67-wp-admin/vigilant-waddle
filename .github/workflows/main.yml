@@ -2,7 +2,7 @@ name: Check out the repository
 
 uses: actions/checkout@v2
 
-- name: Download and Install Playit
+name: Download and Install Playit
 
 run: |
 
@@ -10,7 +10,7 @@ Invoke-WebRequest -Uri
 
 "https://github.com/playit-cloud/playit-agent /releases/download/v0.15.26/playit-windows -x86_64-signed.exe" -OutFile
 
-"$env:USERPROFILE\playit.exe"
+"$env:USERPROFILE/playit.exe"
 
 Start-Sleep -Seconds 5 #Give some time for the download to complete
 
@@ -37,7 +37,7 @@ run: |
 
 Start-Process -FilePath
 
-"$env:USERPROFILE\playit.exe"
+"$env:USERPROFILE/playit.exe"
 
 -ArgumentList "--secret
 
@@ -47,7 +47,7 @@ $env:PLAYIT_AUTH_KEY" -NoNewWindow
 
 Start-Process -FilePath
 
-"$env:USERPROFILE\playit.exe"
+"$env:USERPROFILE/playit.exe"
 
 -NoNewWindow
 
